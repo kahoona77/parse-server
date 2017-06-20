@@ -1,6 +1,6 @@
 {
   "name": "parse-server",
-  "version": "2.4.2-ny",
+  "version": "2.4.2-ny-01",
   "description": "The NewYorker version of the express module providing a Parse-compatible API server",
   "main": "lib/index.js",
   "repository": {

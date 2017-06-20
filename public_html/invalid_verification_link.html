@@ -5,6 +5,7 @@
      (rarely) this could be a sign of a malicious user trying to tamper with your app.
  -->
 <html>
+<html>
 <head>
   <meta name="robots" content="noindex, follow">
   <title>NEWYORKER: Invalid Link</title>
@@ -21,25 +22,6 @@
   <link rel="mask-icon" href="https://api.newyorker.de/public/assets/images/html/favicons/safari-pinned-tab.svg"
         color="#e2001a">
   <meta name="theme-color" content="#ffffff">
-  <script type="text/javascript">
-    function getUrlParameter(name) {
-      name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
-      var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
-      var results = regex.exec(location.search);
-      return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    };
-
-    window.onload = addDataToForm;
-
-    function addDataToForm() {
-      var username = getUrlParameter("username");
-      document.getElementById("usernameField").value = username;
-
-      var appId = getUrlParameter("appId");
-      document.getElementById("resendForm").action = '/apps/' + appId + '/resend_verification_email'
-    }
-
-  </script>
 </head>
 <body>
 <div id="main">
@@ -48,13 +30,7 @@
     <a id="ny-logo" href="https://www.newyorker.de">
       <img src="https://api.newyorker.de/public/assets/images/html/ny_logo.png" alt="" />
     </a>
-    <div class="container">
-      <h1>Invalid Verification Link</h1>
-      <form id="resendForm" method="POST" action="/resend_verification_email">
-        <input id="usernameField" class="form-control" name="username" type="hidden" value="">
-        <button type="submit" class="btn btn-default">Resend Link</button>
-      </form>
-    </div>
+    <h1>This link is no longer valid. Please request a new verification-link.</h1>
   </div>
   <div id="ny-app-ph-r"></div>
 </div>

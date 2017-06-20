@@ -5,44 +5,29 @@
      (rarely) this could be a sign of a malicious user trying to tamper with your app.
  -->
 <html>
-  <head>
-  <title>Invalid Link</title>
-  <style type='text/css'>
-    .container {
-      border-width: 0px;
-      display: block;
-      font: inherit;
-      font-family: 'Helvetica Neue', Helvetica;
-      font-size: 16px;
-      height: 30px;
-      line-height: 16px;
-      margin: 45px 0px 0px 45px;
-      padding: 0px 8px 0px 8px;
-      position: relative;
-      vertical-align: baseline;
-    }
-
-    h1, h2, h3, h4, h5 {
-      color: #0067AB;
-      display: block;
-      font: inherit;
-      font-family: 'Open Sans', 'Helvetica Neue', Helvetica;
-      font-size: 30px;
-      font-weight: 600;
-      height: 30px;
-      line-height: 30px;
-      margin: 0 0 15px 0;
-      padding: 0 0 0 0;
-    }
-  </style>
-  </head>
+<head>
+  <meta name="robots" content="noindex, follow">
+  <title>NEWYORKER: Invalid Link</title>
+  <link rel="stylesheet" href="https://api.newyorker.de/public/assets/css/ny_style.css">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="https://api.newyorker.de/public/assets/images/html/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png"
+        href="https://api.newyorker.de/public/assets/images/html/favicons/favicon-32x32.png"
+        sizes="32x32">
+  <link rel="icon" type="image/png"
+        href="https://api.newyorker.de/public/assets/images/html/favicons/favicon-16x16.png"
+        sizes="16x16">
+  <link rel="manifest" href="https://api.newyorker.de/public/assets/images/html/favicons/manifest.json">
+  <link rel="mask-icon" href="https://api.newyorker.de/public/assets/images/html/favicons/safari-pinned-tab.svg"
+        color="#e2001a">
+  <meta name="theme-color" content="#ffffff">
   <script type="text/javascript">
     function getUrlParameter(name) {
       name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
       var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
       var results = regex.exec(location.search);
       return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
-    };  
+    };
 
     window.onload = addDataToForm;
 
@@ -55,14 +40,23 @@
     }
 
   </script>
-
-  <body> 
+</head>
+<body>
+<div id="main">
+  <div id="ny-app-ph-l"></div>
+  <div class="content" id="ny-app-pw-r">
+    <a id="ny-logo" href="https://www.newyorker.de">
+      <img src="https://api.newyorker.de/public/assets/images/html/ny_logo.png" alt="" />
+    </a>
     <div class="container">
       <h1>Invalid Verification Link</h1>
-        <form id="resendForm" method="POST" action="/resend_verification_email">
-          <input id="usernameField" class="form-control" name="username" type="hidden" value="">
-          <button type="submit" class="btn btn-default">Resend Link</button>
-        </form>
-    </div> 
-  </body>
+      <form id="resendForm" method="POST" action="/resend_verification_email">
+        <input id="usernameField" class="form-control" name="username" type="hidden" value="">
+        <button type="submit" class="btn btn-default">Resend Link</button>
+      </form>
+    </div>
+  </div>
+  <div id="ny-app-ph-r"></div>
+</div>
+</body>
 </html>
